@@ -1,0 +1,59 @@
+
+.login {
+  min-height: calc(100vh - 67px);
+  display: grid;
+  place-content: center;
+
+  & > form {
+    background: #8e4dd2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    gap: 10px;
+    height:200px;
+    box-shadow: 10px 10px 30px black;
+
+    & > button {
+      position: relative;
+      padding: 2px 15px;
+      margin-top: 10px;
+    }
+
+    & > .input-group {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      gap: 10px;
+      flex-direction: column;
+      position: relative;
+
+      & > div {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+      }
+      & > span {
+        position: absolute;
+        bottom: -12px;
+        display: none;
+        color: red;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        font-size: 10px;
+        height: 10px;
+      }
+    }
+  }
+
+  input {
+    display: grid;
+  }
+}
+
+.move-to-bottom {
+  transform: translateY(6px);
+}

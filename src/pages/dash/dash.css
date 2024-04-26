@@ -1,0 +1,43 @@
+.dash {
+  min-height: calc(100vh - 68px);
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+
+  & > aside {
+    width: 80%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    height: 60vh;
+
+    & > textarea {
+      width: 80%;
+      height: 30px;
+      padding: 5px 10px;
+      margin-top: 10px;
+      resize: none;
+    }
+
+    & > article {
+      width: 100%;
+      padding-inline: 10px;
+      display: grid;
+      gap: 20px;
+      overflow-y: auto;
+      padding-top: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+
+      & > div {
+        text-align: center;
+        padding: 4px 0;
+        border-radius: 10px;
+        border: 1px solid #a83eea;
+        word-wrap: break-word;
+      }
+    }
+  }
+}
