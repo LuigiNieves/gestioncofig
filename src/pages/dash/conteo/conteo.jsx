@@ -1,31 +1,16 @@
 import toast from "react-hot-toast";
 import Swal from "sweetalert2";
 import "./conteo.css";
-import { useState, useEffect } from "react";
-import { useContextHook } from "../../../context/context";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+
 
 
 export default function Conteo() {
-  const { email, setState } = useContextHook();
   const [messages, setMessages] = useState([]);
 
   const [message, setMessage] = useState("");
 
-  const navigate = useNavigate();
 
-  useEffect(() => {
-    if (!email) {
-      const user = JSON.parse(localStorage.getItem("auth"));
-
-      if (user) {
-        setState(user);
-        return;
-      }
-
-      navigate("/login");
-    }
-  }, []);
 
   const addMessage = () => {
     setMessages([...messages, { label: message }]);

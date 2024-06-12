@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from "react";
 
 function ConteoArchivo() {
-  const [fileContent, setFileContent] = useState('');
+  const [fileContent, setFileContent] = useState("");
   const [wordCount, setWordCount] = useState(0);
 
   const handleFileRead = (event) => {
@@ -18,7 +18,7 @@ function ConteoArchivo() {
   };
 
   const countWords = (text) => {
-    return text.split(/\s+/).filter(word => word.length > 0).length;
+    return text.split(/\s+/).filter((word) => word.length > 0).length;
   };
 
   return (
