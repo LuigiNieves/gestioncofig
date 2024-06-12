@@ -35,6 +35,13 @@ export const Navbar = () => {
           </button>
         </article>
       </header>
+      <div>
+          <Link to="/dash/conteo"> Conteo</Link>
+          <Link to="/dash/palindroma"> Palindroma</Link>
+          <Link to="/dash/conteoArchivo"> Conteo Archivo</Link>
+      </div>
+
+
       <Outlet />
     </>
   );
