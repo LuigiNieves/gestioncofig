@@ -25,6 +25,8 @@ export const DashPage = () => {
         return;
       }
 
+      
+
       navigate("/login");
     }
   }, []);
